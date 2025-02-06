@@ -1,0 +1,221 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 16px;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Signup and Login Forms */
+.signup-container,
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.signup-container h2,
+.login-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.signup-container p,
+.login-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.signup-container p a,
+.login-container p a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Chat Room */
+.chatroom-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatroom-container h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  color: #333;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message strong {
+  color: #1e88e5;
+  font-weight: bold;
+}
+
+.message span {
+  color: #777;
+  font-size: 12px;
+}
+
+input[type="text"] {
+  width: 75%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.typing-indicator {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Room List */
+.room-list-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.room-list-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.room-list-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.room-list-container li {
+  padding: 12px;
+  background-color: #e8f5e9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.room-list-container li:hover {
+  background-color: #c8e6c9;
+}
+
+.room-list-container li:active {
+  background-color: #a5d6a7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chatroom-container, .signup-container, .login-container, .room-list-container {
+    width: 90%;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
