@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5001');  // Connect to backend
+const socket = io('http://localhost:5001');  
 
 function ChatRoom({ user }) {
   const [message, setMessage] = useState('');
@@ -10,7 +10,7 @@ function ChatRoom({ user }) {
 
   useEffect(() => {
     if (!user) return;
-    socket.emit('joinRoom', { username: user.username, room: 'room1' }); // Assuming one room for now
+    socket.emit('joinRoom', { username: user.username, room: 'room1' }); 
 
     socket.on('message', (msg) => {
       setMessages((prevMessages) => [...prevMessages, msg]);
@@ -27,13 +27,13 @@ function ChatRoom({ user }) {
   }, [user]);
 
   const sendMessage = async () => {
-    const token = localStorage.getItem('token');  // Retrieve JWT token
+    const token = localStorage.getItem('token');  
 
     const response = await fetch('http://localhost:5001/api/chat/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`  // Include token in request headers
+        'Authorization': `Bearer ${token}`  
       },
       body: JSON.stringify({ from_user: user.username, room: 'room1', message })
     });
@@ -45,7 +45,7 @@ function ChatRoom({ user }) {
       console.log('Error:', data.error);
     }
 
-    // Emit the message to the backend through socket
+    
     socket.emit('sendMessage', { message, room: 'room1', username: user.username });
     setMessage('');
   };
@@ -55,7 +55,7 @@ function ChatRoom({ user }) {
   };
 
   if (!user) {
-    return <p>Please log in to join the chat.</p>; // Fallback message if user is not available
+    return <p>Please log in to join the chat.</p>; 
   }
 
   return (

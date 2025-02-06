@@ -6,11 +6,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [token, setToken] = useState('');
-  const navigate = useNavigate(); // Redirect after login
+  const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5001/api/auth/login', { // Ensure correct API URL
+    const response = await fetch('http://localhost:5001/api/auth/login', { 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password }),
@@ -20,11 +20,11 @@ const Login = () => {
 
     if (response.ok) {
       localStorage.setItem('token', data.token);
-      setToken(data.token); // Update UI
+      setToken(data.token); 
       console.log('Login Successful:', data.token);
-      navigate('/chat'); // Redirect to chat page after login
+      navigate('/chat'); 
     } else {
-      setError(data.error || 'Invalid login credentials'); // Display error message
+      setError(data.error || 'Invalid login credentials'); 
     }
   };
 

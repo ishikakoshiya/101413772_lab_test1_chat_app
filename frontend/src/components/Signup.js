@@ -12,7 +12,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    // Basic validation
+    
     if (!username || !firstname || !lastname || !password) {
       setErrorMessage('Please fill in all fields');
       return;
@@ -32,10 +32,10 @@ const Signup = () => {
       if (!response.ok) {
         setErrorMessage(data.error || 'Signup failed');
       } else {
-        // Store user session in localStorage
+        
         localStorage.setItem('user', JSON.stringify(data.user));
 
-        // Redirect to login page after successful signup
+        
         navigate('/login');
       }
     } catch (error) {

@@ -1,4 +1,4 @@
-/* Global Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ body {
   color: #333;
 }
 
-/* App Container */
 #root {
   display: flex;
   justify-content: center;
@@ -22,7 +21,6 @@ body {
   overflow: hidden;
 }
 
-/* Spinner for loading state */
 .spinner {
   position: absolute;
   top: 50%;
@@ -38,7 +36,6 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* Flexbox Containers */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -50,7 +47,6 @@ body {
   flex-direction: column;
 }
 
-/* Buttons */
 button {
   padding: 12px 20px;
   border: none;
@@ -71,7 +67,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Input Fields */
 input[type="text"],
 input[type="password"] {
   padding: 12px;
@@ -89,7 +84,6 @@ input[type="password"]:focus {
   outline: none;
 }
 
-/* Links */
 a {
   color: #4CAF50;
   text-decoration: none;
@@ -100,7 +94,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Chat Container */
 .chat-container {
   width: 100%;
   max-width: 600px;
@@ -127,7 +120,6 @@ a:hover {
   margin-bottom: 20px;
 }
 
-/* Message Box */
 .message {
   padding: 10px;
   margin-bottom: 10px;
@@ -149,7 +141,6 @@ a:hover {
   font-size: 12px;
 }
 
-/* Typing Indicator */
 .typing-indicator {
   font-size: 14px;
   color: #888;
@@ -157,7 +148,6 @@ a:hover {
   font-style: italic;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .chat-container {
     width: 90%;
@@ -171,7 +161,6 @@ a:hover {
   }
 }
 
-/* Room List */
 .room-list-container {
   width: 100%;
   max-width: 400px;

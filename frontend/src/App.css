@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   font-size: 16px;
 }
 
-/* App Container */
+
 .App {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ body {
   height: 100vh;
 }
 
-/* Signup and Login Forms */
+
 .signup-container,
 .login-container {
   width: 100%;
@@ -84,7 +84,7 @@ form input:focus {
   font-weight: bold;
 }
 
-/* Chat Room */
+
 .chatroom-container {
   width: 80%;
   max-width: 900px;
@@ -168,7 +168,7 @@ button:hover {
   font-style: italic;
 }
 
-/* Room List */
+
 .room-list-container {
   width: 100%;
   max-width: 400px;
@@ -208,7 +208,7 @@ button:hover {
   background-color: #a5d6a7;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .chatroom-container, .signup-container, .login-container, .room-list-container {
     width: 90%;

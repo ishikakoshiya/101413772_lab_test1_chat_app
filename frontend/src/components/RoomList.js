@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Use useNavigate instead of useHistory
+import { useNavigate } from 'react-router-dom'; 
 
 const RoomList = () => {
-  const navigate = useNavigate();  // Use useNavigate
+  const navigate = useNavigate();  
   const [rooms, setRooms] = useState([]);
 
   useEffect(() => {
-    // Fetch the list of rooms from the server or API
-    // Example hardcoded rooms for now
+    
     setRooms([{ id: 1, name: 'Room 1' }, { id: 2, name: 'Room 2' }]);
   }, []);
 
   const handleRoomClick = (roomId) => {
-    navigate(`/room/${roomId}`);  // Navigate to room details
+    navigate(`/room/${roomId}`);  
   };
 
   return (

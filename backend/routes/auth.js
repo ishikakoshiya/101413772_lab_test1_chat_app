@@ -5,18 +5,18 @@ import User from '../models/User.js';
 
 const router = express.Router();
 
-// Signup Route
+
 router.post('/signup', async (req, res) => {
   const { username, firstname, lastname, password } = req.body;
 
   try {
-    // Check if username already exists
+    
     const existingUser = await User.findOne({ username });
     if (existingUser) {
       return res.status(400).json({ error: 'Username already exists' });
     }
 
-    // Hash password before saving
+    
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({ username, firstname, lastname, password: hashedPassword });
@@ -29,7 +29,7 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-// Login Route
+
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
